@@ -9,7 +9,7 @@ size = Vector2(51, 72)
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(715, 357)
+position = Vector2(360, 289)
 script = ExtResource("1_44gc5")
 metadata/_edit_group_ = true
 
