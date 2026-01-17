@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://72j6a2x2ujf4"]
+[gd_scene format=3 uid="uid://72j6a2x2ujf4"]
 
 [ext_resource type="Script" uid="uid://cd716o1hdfam7" path="res://Player.cs" id="1_3mip4"]
 [ext_resource type="Script" uid="uid://d0bwq15ugnnuh" path="res://assets/Camera.cs" id="1_insbl"]
@@ -7,20 +7,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rug40"]
 size = Vector2(51, 72)
 
-[node name="Player" type="Node"]
+[node name="Player" type="Node" unique_id=1437383422]
 
-[node name="Camera" type="CharacterBody2D" parent="."]
+[node name="Camera" type="CharacterBody2D" parent="." unique_id=976966852]
 script = ExtResource("1_insbl")
 
-[node name="Camera2D" type="Camera2D" parent="Camera"]
+[node name="Camera2D" type="Camera2D" parent="Camera" unique_id=1809143025]
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=611700000]
 script = ExtResource("1_3mip4")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1472235410]
 scale = Vector2(0.40625, 0.5625)
 texture = ExtResource("2_insbl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1964159649]
 shape = SubResource("RectangleShape2D_rug40")

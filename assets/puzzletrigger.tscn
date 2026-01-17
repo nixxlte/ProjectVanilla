@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4suwb5v12a7k"]
+
+[ext_resource type="Script" uid="uid://ctnmy5ccc7q2v" path="res://assets/trigger.cs" id="1_1xqom"]
+[ext_resource type="Texture2D" uid="uid://dq0j8methcx2j" path="res://icon.svg" id="1_m4ovi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4ovi"]
+size = Vector2(129, 130)
+
+[node name="PuzzleTrigger" type="Node2D" unique_id=1008347860]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1287684546]
+script = ExtResource("1_1xqom")
+
+[node name="Icon" type="Sprite2D" parent="Area2D" unique_id=1485325772]
+texture = ExtResource("1_m4ovi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=8203864]
+shape = SubResource("RectangleShape2D_m4ovi")
