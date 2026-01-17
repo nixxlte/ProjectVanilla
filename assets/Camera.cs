@@ -1,9 +1,7 @@
 using Godot;
 using System;
 
-// i didnt do this code, thats the default code, ill probably change everything here, but not for now
-
-public partial class Player : CharacterBody2D
+public partial class Camera : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
