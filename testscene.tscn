@@ -1,22 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://2g4f8atydxcg"]
+[gd_scene format=3 uid="uid://2g4f8atydxcg"]
 
 [ext_resource type="PackedScene" uid="uid://72j6a2x2ujf4" path="res://assets/player.tscn" id="1_jotil"]
 [ext_resource type="Texture2D" uid="uid://dq0j8methcx2j" path="res://icon.svg" id="2_44gc5"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_612pj"]
+size = Vector2(63, 84)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44gc5"]
 size = Vector2(130, 129)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=670933993]
 
-[node name="Player" parent="." instance=ExtResource("1_jotil")]
+[node name="scnPlayer" parent="." unique_id=1662247776 instance=ExtResource("1_jotil")]
 
-[node name="MissionTrigger" type="StaticBody2D" parent="."]
+[node name="Player2" type="CharacterBody2D" parent="scnPlayer" unique_id=1122904237]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scnPlayer/Player2" unique_id=1857523402]
+shape = SubResource("RectangleShape2D_612pj")
+disabled = true
+one_way_collision = true
+
+[node name="Icon" type="Sprite2D" parent="scnPlayer" unique_id=1194136247]
+position = Vector2(2, -53)
+scale = Vector2(0.140625, 0.1875)
+texture = ExtResource("2_44gc5")
+
+[node name="MissionTrigger" type="StaticBody2D" parent="." unique_id=929760847]
 position = Vector2(138, 95)
 metadata/_edit_group_ = true
 
-[node name="Icon" type="Sprite2D" parent="MissionTrigger"]
+[node name="Icon" type="Sprite2D" parent="MissionTrigger" unique_id=208895540]
 texture = ExtResource("2_44gc5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MissionTrigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MissionTrigger" unique_id=71928971]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_44gc5")
